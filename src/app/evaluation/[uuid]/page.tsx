@@ -62,12 +62,12 @@ export default async function compare({ params }: UrlParams) {
                                 <p>Generated recipe</p>
                                 {evaluation.generatedCalculatedNutrition && <NutritionInfo nutrition={evaluation.generatedCalculatedNutrition}/>}
                             </div>
-                            <div>
+                            <div className="text-gray-600">
                                 <p>Original recipe (from metadata)</p>
                                 {evaluation.originalWebNutrition && <NutritionInfo nutrition={evaluation.originalWebNutrition}/>}
                             </div>
-                            <div className="text-gray-600">
-                                <p className="text-gray-600">Change from the original recipe</p>
+                            <div>
+                                <p>Change from the original recipe</p>
                                 {evaluation.calculatedNutritionChanges && <NutritionChangesInfo nutrition={evaluation.calculatedNutritionChanges}/>}
                             </div>
                             <div>
