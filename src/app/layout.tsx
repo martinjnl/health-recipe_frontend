@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Recipe Optimizer",
   description: "Healtier meals through AI",
+  robots: "noindex, nofollow",
 }
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>) {
