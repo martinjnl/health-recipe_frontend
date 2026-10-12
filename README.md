@@ -1,3 +1,7 @@
+This repo is connected to kthcloud and a container there.
+
+# Standalone installation
+
 1. Install Node.js (https://nodejs.org/en)
    
 2. Set up and start the Backend server (https://github.com/simonfridh/RecipeApp_Backend)
