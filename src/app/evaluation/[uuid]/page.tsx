@@ -50,33 +50,29 @@ export default async function compare({ params }: UrlParams) {
                             {evaluation.ingredientOverlap && <h1 className="text-xl">
                                 Ingredient Overlap: {(evaluation.ingredientOverlap*100).toFixed(1) + "%"}
                             </h1>}
+                            <h1>Nutritional content (per serving):</h1>
                         </div>
 
-                        <div className="grid grid-cols-3 flex-1 gap-5">
+                        <div className="grid grid-cols-2 flex-1 gap-5">
                             <div>
                                 <p>Original recipe</p>
                                 {evaluation.originalCalculatedNutrition && <NutritionInfo nutrition={evaluation.originalCalculatedNutrition}/>}
                             </div>
-
                             <div>
                                 <p>Generated recipe</p>
                                 {evaluation.generatedCalculatedNutrition && <NutritionInfo nutrition={evaluation.generatedCalculatedNutrition}/>}
                             </div>
                             <div>
-                                <p>Relative Change between generated and original recipe</p>
+                                <p>Original recipe (from metadata)</p>
+                                {evaluation.originalWebNutrition && <NutritionInfo nutrition={evaluation.originalWebNutrition}/>}
+                            </div>
+                            <div className="text-gray-600">
+                                <p className="text-gray-600">Change from the original recipe</p>
                                 {evaluation.calculatedNutritionChanges && <NutritionChangesInfo nutrition={evaluation.calculatedNutritionChanges}/>}
                             </div>
                             <div>
-                                <p>Nutritional content found in original web recipe metadata</p>
-                                {evaluation.originalWebNutrition && <NutritionInfo nutrition={evaluation.originalWebNutrition}/>}
                             </div>
                             <div>
-                                <p>AI-models estimation of nutritional content in generated recipe</p>
-                                {evaluation.generatedAiNutrition && <NutritionInfo nutrition={evaluation.generatedAiNutrition}/>}
-                            </div>
-                            <div>
-                                <p>Relative change between original recipe and AI-model estimations</p>
-                                {evaluation.aiNutritionChanges && <NutritionChangesInfo nutrition={evaluation.aiNutritionChanges}/>}
                             </div>
 
                         </div>
