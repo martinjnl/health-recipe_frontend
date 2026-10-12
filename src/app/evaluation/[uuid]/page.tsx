@@ -50,7 +50,9 @@ export default async function compare({ params }: UrlParams) {
                             {evaluation.ingredientOverlap && <h1 className="text-xl">
                                 Ingredient Overlap: {(evaluation.ingredientOverlap*100).toFixed(1) + "%"}
                             </h1>}
-                            <h1>Nutritional content (per serving):</h1>
+                        </div>
+                        <div className="flex flex-col gap-0 items-center justify-center">
+                            <h1 className="text-xl font-bold">Nutritional content (per serving):</h1>
                         </div>
 
                         <div className="grid grid-cols-2 flex-1 gap-5">
